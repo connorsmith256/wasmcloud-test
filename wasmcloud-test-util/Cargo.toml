@@ -11,13 +11,13 @@ readme = "README.md"
 
 [dependencies]
 wasmcloud-interface-testing = "0.7.1"
-wasmbus-rpc = "0.11.2"
+wasmbus-rpc = { git = "https://github.com/connorsmith256/weld", branch = "deleted-keys-fix", features = ["otel"]}
 regex = "1"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 anyhow = "1.0"
 async-trait = "0.1"
-async-nats = "0.23.0"
+async-nats = "0.27"
 futures = "0.3"
 base64 = "0.13"
 log = "0.4"
